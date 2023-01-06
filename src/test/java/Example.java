@@ -1,7 +1,10 @@
+import com.codeborne.selenide.Driver;
+import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Example {
 
@@ -13,6 +16,7 @@ public class Example {
     @BeforeClass
     public static void startUp() {
         open(url);
+
     }
 
 
@@ -23,7 +27,7 @@ public class Example {
         Utils.wait(MainPage.register());
         MainPage.register().click();
 
-        Utils.wait(LoginPage.sendEmail(""));
+        Utils.wait(LoginPage.sendEmail(mail));
         LoginPage.sendEmail(mail);
 
         Utils.wait(LoginPage.sendPassword(""));
@@ -37,5 +41,7 @@ public class Example {
 
         Utils.wait(LoginPage.personalArea());
     }
+
+
 
 }
