@@ -6,6 +6,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Example {
 
+    private final String mail = "fsafasf@mail.ru";
+    private final String pass = "Ascz13210009";
+
 
     @BeforeClass
     public static void startUp() {
@@ -22,13 +25,13 @@ public class Example {
         MainPage.register().click();
 
         Utils.wait(LoginPage.sendEmail(""));
-        LoginPage.sendEmail("fsafasf@mail.ru");
+        LoginPage.sendEmail(mail);
 
         Utils.wait(LoginPage.sendPassword(""));
-        LoginPage.sendPassword("Ascz13210009");
+        LoginPage.sendPassword(pass);
 
         Utils.wait(LoginPage.sendAcceptPassword(""));
-        LoginPage.sendAcceptPassword("Ascz13210009");
+        LoginPage.sendAcceptPassword(pass);
 
         Utils.wait(LoginPage.acceptRegister());
         LoginPage.acceptRegister().click();
