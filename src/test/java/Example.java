@@ -8,12 +8,13 @@ public class Example {
 
     private final String mail = "fsafasf@mail.ru";
     private final String pass = "Ascz13210009";
+    private static final String url = "https://bitokk.biz/exchange/SBERRUB/BTC/MSK";
 
 
     @BeforeClass
     public static void startUp() {
 
-        open("https://bitokk.biz/exchange/SBERRUB/BTC/MSK");
+        open(url);
     }
 
 
