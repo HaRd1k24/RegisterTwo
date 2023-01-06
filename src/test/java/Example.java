@@ -37,7 +37,7 @@ public class Example {
         Utils.wait(LoginPage.acceptRegister());
         LoginPage.acceptRegister().click();
 
-        Utils.wait(LoginPage.accept());
+        Utils.wait(LoginPage.personalArea());
     }
 
 }

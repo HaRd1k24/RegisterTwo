@@ -26,7 +26,7 @@ public static WebElement sendEmail(String email){
     }
 
 
-    public static SelenideElement accept() {
+    public static SelenideElement personalArea() {
         SelenideElement accept = $x("//*[text()='Личный кабинет']");
         return accept;
     }
