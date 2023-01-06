@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Example {
 
-    private final String mail = "fsafasf@mail.ru";
+    private final String mail = Utils.generateRqUIDAndDocGuid(10) +"@mail.ru";
     private final String pass = "Ascz13210009";
     private static final String url = "https://bitokk.biz/exchange/SBERRUB/BTC/MSK";
 
@@ -38,7 +38,6 @@ public class Example {
         LoginPage.acceptRegister().click();
 
         Utils.wait(LoginPage.accept());
-        LoginPage.accept();
     }
 
 }
