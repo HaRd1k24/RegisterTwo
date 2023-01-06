@@ -9,8 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Utils {
 
-   public static void wait(WebElement webElement) {
-        $((webElement)).shouldBe(Condition.enabled,Duration.ofSeconds(30));
+    /**
+     * Ожидание
+     */
+    public static void wait(WebElement webElement) {
+        $((webElement)).shouldBe(Condition.enabled, Duration.ofSeconds(30));
     }
 
 

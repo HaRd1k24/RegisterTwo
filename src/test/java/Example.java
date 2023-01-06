@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -6,20 +5,19 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Example {
 
-    private final String mail = Utils.generateRqUIDAndDocGuid(10) +"@mail.ru";
+    private final String mail = Utils.generateRqUIDAndDocGuid(10) + "@mail.ru";
     private final String pass = "Ascz13210009";
     private static final String url = "https://bitokk.biz/exchange/SBERRUB/BTC/MSK";
 
 
     @BeforeClass
     public static void startUp() {
-
         open(url);
     }
 
 
     @Test
-    public  void successRegister() {
+    public void successRegister() {
         Utils.wait(MainPage.open());
         MainPage.open().click();
         Utils.wait(MainPage.register());
